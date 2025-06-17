@@ -17,6 +17,7 @@ export async function GET(request: NextRequest) {
         const user = await github.getUser(username);
 
         return NextResponse.json(user);
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
         return NextResponse.json(
             { error: "Failed to fetch user data" },

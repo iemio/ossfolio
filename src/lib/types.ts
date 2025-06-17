@@ -81,6 +81,7 @@ export interface ContributionStats {
     pullRequests: PullRequest[];
     issues: Issue[];
     repositories: Repository[];
+    //eslint-disable-next-line @typescript-eslint/no-explicit-any
     codeReviews: any[];
     totalContributions: number;
     contributionsByRepo: Record<string, number>;

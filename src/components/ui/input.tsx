@@ -2,6 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 export interface InputProps
+    //eslint-disable-next-line @typescript-eslint/no-empty-interface
     extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
@@ -19,3 +20,5 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
         );
     }
 );
+
+Input.displayName = "Input";

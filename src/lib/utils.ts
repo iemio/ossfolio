@@ -12,9 +12,10 @@ export function formatDate(dateString: string): string {
         day: "numeric",
     });
 }
-
+//eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function getPRType(pr: any): string {
     const title = pr.title.toLowerCase();
+    //eslint-disable-next-line @typescript-eslint/no-explicit-any
     const labels = pr.labels.map((l: any) => l.name.toLowerCase());
 
     if (
@@ -45,6 +46,7 @@ export function getPRType(pr: any): string {
     return "other";
 }
 
+//eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function calculateContributionScore(stats: any): number {
     return (
         stats.pullRequests.length * 3 +

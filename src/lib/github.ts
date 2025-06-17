@@ -33,6 +33,7 @@ export class GitHubClient {
         });
 
         const prs = await Promise.all(
+            //eslint-disable-next-line @typescript-eslint/no-explicit-any
             data.items.map(async (item: any) => {
                 const [owner, repo] = item.repository_url.split("/").slice(-2);
                 const prDetails = await this.octokit.rest.pulls.get({
