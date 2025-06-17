@@ -11,7 +11,9 @@ export class AIClient {
     async generateContributionSummary(
         stats: ContributionStats
     ): Promise<string> {
-        const model = this.genAI.getGenerativeModel({ model: "gemini-pro" });
+        const model = this.genAI.getGenerativeModel({
+            model: "gemini-2.0-flash",
+        });
 
         const prompt = `
     Analyze the following GitHub contribution data and provide a concise professional summary:
@@ -45,7 +47,9 @@ export class AIClient {
         stats: ContributionStats,
         user: GitHubUser
     ): Promise<string> {
-        const model = this.genAI.getGenerativeModel({ model: "gemini-pro" });
+        const model = this.genAI.getGenerativeModel({
+            model: "gemini-2.0-flash",
+        });
 
         const prompt = `
     Create a professional OSS resume in markdown format for ${
@@ -85,7 +89,9 @@ export class AIClient {
         stats: ContributionStats,
         user: GitHubUser
     ): Promise<string[]> {
-        const model = this.genAI.getGenerativeModel({ model: "gemini-pro" });
+        const model = this.genAI.getGenerativeModel({
+            model: "gemini-2.0-flash",
+        });
 
         const prompt = `
     Create an engaging Twitter thread about ${
